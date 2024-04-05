@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 use App\Models\Type;
+use App\Models\Dish;
 
 class RegisteredUserController extends Controller
 {
@@ -22,7 +23,9 @@ class RegisteredUserController extends Controller
     public function create(): View
     {
         $types = Type::all();
-        return view('auth.register', compact('types'));
+        $dishes = Dish::all();
+
+        return view('auth.register', compact('types', 'dishes'));
     }
 
     /**

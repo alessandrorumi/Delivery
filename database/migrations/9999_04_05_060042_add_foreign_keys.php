@@ -12,9 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('type_user', function (Blueprint $table) {
-
             $table -> foreignId('type_id') -> constrained();
             $table -> foreignId('user_id') -> constrained();
+        });
+
+        Schema::table('dishes', function (Blueprint $table) {
+            $table->foreignId('user_id')->constrained();
         });
     }
 
@@ -30,6 +33,11 @@ return new class extends Migration
 
             $table -> dropForeign(['user_id']);
             $table -> dropColumn(['user_id']);
+        });
+
+        Schema::table('dishes', function (Blueprint $table) {
+            $table->dropForeign('dishes_user_id_foreign');
+            $table->dropColumn('user_id');
         });
     }
 };

@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User :: factory() 
-             -> count(50) 
+             -> count(25) 
              -> create()
              -> each(function($user) {
 

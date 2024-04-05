@@ -16,10 +16,10 @@ class TypeSeeder extends Seeder
     {
         $types = [
             [
-                'name'  => 'Italiana'
+                'name'  => 'Giapponese'
             ],
             [
-                'name'  => 'Giapponese'
+                'name'  => 'Italiana'
             ],
             [
                 'name'  => 'Messicana'
@@ -33,24 +33,24 @@ class TypeSeeder extends Seeder
             [
                 'name'  => 'Cinese'
             ],
-            [
-                'name'  => 'Spagnola'
-            ],
-            [
-                'name'  => 'Tailandese'
-            ],
-            [
-                'name'  => 'Vietnamita'
-            ],
-            [
-                'name'  => 'Greca'
-            ],
-            [
-                'name'  => 'Irlandese'
-            ],
-            [
-                'name'  => 'Turca'
-            ],
+            // [
+            //     'name'  => 'Spagnola'
+            // ],
+            // [
+            //     'name'  => 'Tailandese'
+            // ],
+            // [
+            //     'name'  => 'Vietnamita'
+            // ],
+            // [
+            //     'name'  => 'Greca'
+            // ],
+            // [
+            //     'name'  => 'Irlandese'
+            // ],
+            // [
+            //     'name'  => 'Turca'
+            // ],
         ];
 
         foreach($types as $type){
