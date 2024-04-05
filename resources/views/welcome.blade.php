@@ -39,9 +39,12 @@
         }
 
         a {
-            color: black;
+            color: rgb(255, 255, 255);
+            background-color: rgb(44, 52, 66);
+            font-size: .9rem;
+            font-weight: bold;
             text-decoration: none;
-            padding: .5rem 1rem;
+            padding: .25rem .65rem;
             border: 2px solid black;
             border-radius: 5px;
         }
@@ -55,10 +58,10 @@
                 @auth
                     <a href="{{ url('/dashboard') }}">Dashboard</a>
                 @else
-                    <a href="{{ route('login') }}">Login</a>
+                    <a href="{{ route('login') }}">LOGIN</a>
 
                     @if (Route::has('register'))
-                        <a href="{{ route('register') }}">Registrati</a>
+                        <a href="{{ route('register') }}">REGISTRATI</a>
                     @endif
                 @endauth
             </div>

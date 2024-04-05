@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->string('address')->unique();
             $table->string('vat_id')->unique();
-            $table->string('type')->unique();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -57,9 +57,18 @@
         <!-- type -->
         <div class="mt-4">
             <x-input-label for="type" :value="__('Tipologia di Cucina')" />
-            <x-text-input id="type" class="block mt-1 w-full" type="text" name="type" :value="old('type')"
+
+            {{-- <x-text-input id="type" class="block mt-1 w-full" type="text" name="type" :value="old('type')"
                 required autofocus autocomplete="type" />
-            <x-input-error :messages="$errors->get('type')" class="mt-2" />
+            <x-input-error :messages="$errors->get('type')" class="mt-2" /> --}}
+
+            @foreach ($types as $type)
+                <div class="col-md-6 text-start">
+                    <input type="checkbox" name="type_id[]" autofocus value="{{ $type->id }}">
+                    <label class="checkbox-inline"> {{ $type->name }}</label>
+                </div>
+                <x-input-error :messages="$errors->get('type')" class="mt-2" />
+            @endforeach
         </div>
 
         <div class="flex items-center justify-end mt-4">

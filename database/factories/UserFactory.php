@@ -31,7 +31,6 @@ class UserFactory extends Factory
             'name' => fake()->name(),
             'address' => fake()->unique()->address(),
             'vat_id' => fake()->unique()->numerify('IT###########'),
-            'type' => fake()->unique()->word(),
             'remember_token' => Str::random(10),
         ];
     }

@@ -45,4 +45,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function types(){
+        return $this->belongsToMany(Type::class);
+    }
 }

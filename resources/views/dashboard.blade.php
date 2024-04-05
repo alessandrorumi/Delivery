@@ -11,17 +11,25 @@
                 <div class="p-6 text-gray-900">
                     {{ __('Le tue Info') }}
                 </div>
-                <div>
-                    <h2>{{ Auth::user()->name }}</h2>
+                <div class="mb-3">
+                    <h2 class="font-semibold text-lg text-gray-800 leading-tight">{{ Auth::user()->name }}</h2>
+                </div>
+                <div class="mb-3">
+                    <h2 class="font-semibold text-lg text-gray-800 leading-tight">{{ Auth::user()->address }}</h2>
+                </div>
+                <div class="mb-3">
+                    <h2 class="font-semibold text-lg text-gray-800 leading-tight">{{ Auth::user()->vat_id }}</h2>
                 </div>
                 <div>
-                    <h2>{{ Auth::user()->address }}</h2>
-                </div>
+                    <h2 class="font-semibold text-lg text-gray-800 leading-tight">{{ Auth::user()->type }}</h2>
+                </div class="mb-3">
                 <div>
-                    <h2>{{ Auth::user()->vat_id }}</h2>
-                </div>
-                <div>
-                    <h2>{{ Auth::user()->type }}</h2>
+                    <h2 class="font-semibold text-lg text-gray-800 leading-tight">Tipi di cucina:</h2>
+                    <ul>
+                        @foreach (Auth::user()->types as $type)
+                            <li>{{ $type->name }}</li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
