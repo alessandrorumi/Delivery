@@ -33,12 +33,12 @@ class TypeSeeder extends Seeder
             [
                 'name'  => 'Cinese'
             ],
-            // [
-            //     'name'  => 'Spagnola'
-            // ],
-            // [
-            //     'name'  => 'Tailandese'
-            // ],
+            [
+                'name'  => 'Spagnola'
+            ],
+            [
+                'name'  => 'Tailandese'
+            ],
             // [
             //     'name'  => 'Vietnamita'
             // ],
@@ -54,9 +54,7 @@ class TypeSeeder extends Seeder
         ];
 
         foreach($types as $type){
-            
             Type::create($type);
-      
         }
     }
 }

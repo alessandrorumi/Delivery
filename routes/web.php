@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\DishController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+Route::get('/dishes/create', [DishController::class, 'create'])
+    ->name('dishes.create');
+
+Route::post('/dishes/create', [DishController::class, 'store'])
+    ->name('dishes.store');
 
 Route::get('/', function () {
     return view('welcome');

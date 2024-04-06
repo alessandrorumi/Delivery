@@ -44,4 +44,25 @@ class UserFactory extends Factory
             'email_verified_at' => null,
         ]);
     }
+
+    /**
+     * Define a state with custom data for the user.
+     *
+     * @param  string  $email
+     * @param  string  $name
+     * @param  string  $address
+     * @param  string  $vat_id
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     */
+    public function withCustomData($email, $name, $address, $vat_id)
+    {
+        return $this->state(function (array $attributes) use ($email, $name, $address, $vat_id) {
+            return [
+                'email' => $email,
+                'name' => $name,
+                'address' => $address,
+                'vat_id' => $vat_id,
+            ];
+        });
+    }
 }
