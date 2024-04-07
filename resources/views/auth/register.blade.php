@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
         @csrf
 
         <!-- Email Address -->
@@ -32,18 +32,29 @@
 
         <!-- name -->
         <div class="mt-4">
-            <x-input-label for="name" :value="__('Nome attività')" />
+            <x-input-label for="name" :value="__('Nome dell\'attività')" />
             <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')"
                 required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
+        <!-- logo -->
+        <div class="mt-4">
+            <label for="logo"
+                class="block font-medium text-sm text-gray-700">{{ __('Logo dell\'attività') }}</label>
+            <input id="logo" class="block mt-1 w-full" type="file" accept="image/*" name="logo"
+                value="{{ old('logo') }}" required autofocus autocomplete="logo" />
+            @if ($errors->has('logo'))
+                <p class="mt-2 text-sm text-red-600">{{ $errors->first('logo') }}</p>
+            @endif
+        </div>
+
         <!-- address -->
         <div class="mt-4">
-            <x-input-label for="address" :value="__('Indirizzo')" />
-            <x-text-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')"
-                required autofocus autocomplete="address" />
-            <x-input-error :messages="$errors->get('address')" class="mt-2" />
+            <label for="address" :value="__('Indirizzo')">
+                <x-text-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')"
+                    required autofocus autocomplete="address" />
+                <x-input-error :messages="$errors->get('address')" class="mt-2" />
         </div>
 
         <!-- vat_id -->

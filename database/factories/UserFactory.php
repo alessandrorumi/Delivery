@@ -54,10 +54,11 @@ class UserFactory extends Factory
      * @param  string  $vat_id
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
-    public function withCustomData($email, $name, $address, $vat_id)
+    public function withCustomData($img, $email, $name, $address, $vat_id)
     {
-        return $this->state(function (array $attributes) use ($email, $name, $address, $vat_id) {
+        return $this->state(function (array $attributes) use ($img, $email, $name, $address, $vat_id) {
             return [
+                'img' => $img,
                 'email' => $email,
                 'name' => $name,
                 'address' => $address,

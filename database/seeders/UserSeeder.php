@@ -16,31 +16,35 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $user1 = User::factory()->create([
-            'email' => 'garden.sushi@mail.com',
-            'name' => 'Sushi Garden',
+            'email' => 'sushi.chan@mail.com',
+            'name' => 'Sushi Chan',
             'address' => 'Via Roma 10',
             'vat_id' => 'IT12345678901',
+            'logo' => 'logo1.png'
         ]);
 
         $user2 = User::factory()->create([
-            'email' => 'house.ramen@mail.com',
-            'name' => 'Ramen House',
+            'email' => 'suhi.bar@mail.com',
+            'name' => 'Sushi Bar',
             'address' => 'Corso Vittorio Emanuele 20',
             'vat_id' => 'IT23456789012',
+            'logo' => 'logo2.png'
         ]);
 
         $user3 = User::factory()->create([
-            'email' => 'ristorante.primavera@mail.com',
-            'name' => 'Ristorante Primavera',
+            'email' => 'don.antonio@mail.com',
+            'name' => 'Don Antonio',
             'address' => 'Via della Libertà 15',
             'vat_id' => 'IT34567890123',
+            'logo' => 'logo3.png'
         ]);
         
         $user4 = User::factory()->create([
-            'email' => 'trattoria.roma@mail.com',
-            'name' => 'Trattoria Roma',
+            'email' => 'italia.farina@mail.com',
+            'name' => 'Italia Farina',
             'address' => 'Via Garibaldi 20',
             'vat_id' => 'IT45678901234',
+            'logo' => 'logo4.png'
         ]);
 
         $user5 = User::factory()->create([
@@ -48,6 +52,7 @@ class UserSeeder extends Seeder
             'name' => 'Los Amigos Taqueria',
             'address' => 'Via Rosa 25',
             'vat_id' => 'IT56789012345',
+            'logo' => 'logo5.png'
         ]);
         
         $user6 = User::factory()->create([
@@ -55,6 +60,7 @@ class UserSeeder extends Seeder
             'name' => 'Taco Lindo',
             'address' => 'Viale del Sole 30',
             'vat_id' => 'IT67890123456',
+            'logo' => 'logo6.png'
         ]);
 
         $user7 = User::factory()->create([
@@ -62,6 +68,7 @@ class UserSeeder extends Seeder
             'name' => 'Le Bistro Français',
             'address' => 'Via Garibaldi 35',
             'vat_id' => 'IT78901234567',
+            'logo' => 'logo7.png'
         ]);
         
         $user8 = User::factory()->create([
@@ -69,6 +76,7 @@ class UserSeeder extends Seeder
             'name' => 'Chez Pierre',
             'address' => 'Via Roma 45',
             'vat_id' => 'IT89012345678',
+            'logo' => 'logo8.png'
         ]);
 
         $user9 = User::factory()->create([
@@ -76,6 +84,7 @@ class UserSeeder extends Seeder
             'name' => 'Taj Mahal Indian Cuisine',
             'address' => 'Via della Sapienza 12',
             'vat_id' => 'IT90123456789',
+            'logo' => 'logo9.png'
         ]);
         
         $user10 = User::factory()->create([
@@ -83,6 +92,7 @@ class UserSeeder extends Seeder
             'name' => 'Spice of India',
             'address' => 'Via Garibaldi 28',
             'vat_id' => 'IT01234567890',
+            'logo' => 'logo10.png'
         ]);
 
         $user11 = User::factory()->create([
@@ -90,6 +100,7 @@ class UserSeeder extends Seeder
             'name' => 'Dragon House',
             'address' => 'Via Siena 88',
             'vat_id' => 'IT11223344556',
+            'logo' => 'logo11.png'
         ]);
         
         $user12 = User::factory()->create([
@@ -97,6 +108,7 @@ class UserSeeder extends Seeder
             'name' => 'Great Wall Chinese Restaurant',
             'address' => 'Via Baldi 55',
             'vat_id' => 'IT22334455667',
+            'logo' => 'logo12.png'
         ]);
 
         $user13 = User::factory()->create([
@@ -104,6 +116,7 @@ class UserSeeder extends Seeder
             'name' => 'Tapas Bar El Sol',
             'address' => 'Via della Luna 20',
             'vat_id' => 'IT33445566778',
+            'logo' => 'logo13.png'
         ]);
         
         $user14 = User::factory()->create([
@@ -111,6 +124,7 @@ class UserSeeder extends Seeder
             'name' => 'Paella Paradise',
             'address' => 'Piazza del Mare 15',
             'vat_id' => 'IT44556677889',
+            'logo' => 'logo14.png'
         ]);
         
         $user15 = User::factory()->create([
@@ -118,6 +132,7 @@ class UserSeeder extends Seeder
             'name' => 'Thai Fusion',
             'address' => 'Via Funzi 72',
             'vat_id' => 'IT55667788990',
+            'logo' => 'logo15.png'
         ]);
         
         $user16 = User::factory()->create([
@@ -125,6 +140,7 @@ class UserSeeder extends Seeder
             'name' => 'Siam Delight',
             'address' => 'Via Empoli 33',
             'vat_id' => 'IT66778899001',
+            'logo' => 'logo16.png'
         ]);
         
         $giapponese = Type::where('name', 'Giapponese')->firstOrFail();

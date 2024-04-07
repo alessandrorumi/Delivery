@@ -10,6 +10,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 use App\Models\Type;
@@ -39,15 +40,19 @@ class RegisteredUserController extends Controller
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'name' => ['required', 'string', 'max:255'],
+            'logo' => ['required', 'image', 'max:2048'],
             'address' => ['nullable', 'string', 'max:255'],
             'vat_id' => ['required', 'string', 'max:13'],
             'type_id' => ['required', 'array'],
         ]);
 
+        $logoPath = $request->file('logo')->store('logos');
+
         $user = User::create([
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'name' => $request->name,
+            'logo' => $logoPath,
             'address' => $request->address,
             'vat_id' => $request->vat_id,
         ]);
