@@ -48,48 +48,48 @@ class UserSeeder extends Seeder
         ]);
 
         $user5 = User::factory()->create([
-            'email' => 'los.amigos@mail.com',
-            'name' => 'Los Amigos Taqueria',
+            'email' => 'don.pacho@mail.com',
+            'name' => 'Don Pacho Taqueria',
             'address' => 'Via Rosa 25',
             'vat_id' => 'IT56789012345',
             'logo' => 'logo5.png'
         ]);
         
         $user6 = User::factory()->create([
-            'email' => 'taco.lindo@mail.com',
-            'name' => 'Taco Lindo',
+            'email' => 'borcelle.tacos@mail.com',
+            'name' => 'Borcelle Tacos',
             'address' => 'Viale del Sole 30',
             'vat_id' => 'IT67890123456',
             'logo' => 'logo6.png'
         ]);
 
         $user7 = User::factory()->create([
-            'email' => 'le.bistro@mail.com',
-            'name' => 'Le Bistro Français',
+            'email' => 'le.coquillage@mail.com',
+            'name' => 'Le Coquillage',
             'address' => 'Via Garibaldi 35',
             'vat_id' => 'IT78901234567',
             'logo' => 'logo7.png'
         ]);
         
         $user8 = User::factory()->create([
-            'email' => 'chez.pierre@mail.com',
-            'name' => 'Chez Pierre',
+            'email' => 'verre.devin@mail.com',
+            'name' => 'Un Verre de Vin',
             'address' => 'Via Roma 45',
             'vat_id' => 'IT89012345678',
             'logo' => 'logo8.png'
         ]);
 
         $user9 = User::factory()->create([
-            'email' => 'tajmahal@mail.com',
-            'name' => 'Taj Mahal Indian Cuisine',
+            'email' => 'swaad@mail.com',
+            'name' => 'Swaad',
             'address' => 'Via della Sapienza 12',
             'vat_id' => 'IT90123456789',
             'logo' => 'logo9.png'
         ]);
         
         $user10 = User::factory()->create([
-            'email' => 'spiceofindia@mail.com',
-            'name' => 'Spice of India',
+            'email' => 'kadhai.corner@mail.com',
+            'name' => 'Kadhai Corner',
             'address' => 'Via Garibaldi 28',
             'vat_id' => 'IT01234567890',
             'logo' => 'logo10.png'

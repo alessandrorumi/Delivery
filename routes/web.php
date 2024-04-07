@@ -23,6 +23,15 @@ Route::get('/dishes/create', [DishController::class, 'create'])
 Route::post('/dishes/create', [DishController::class, 'store'])
     ->name('dishes.store');
 
+Route::get('/dishes/{id}/edit', [DishController::class, 'edit'])
+    ->name('dishes.edit');
+
+Route::put('/dishes/{id}/edit', [DishController::class, 'update'])
+    ->name('dishes.update');
+
+Route::delete('/dishes/{id}/destroy', [DishController::class, 'destroy'])
+->name('dishes.destroy');
+
 Route::get('/', function () {
     return view('welcome');
 });

@@ -58,7 +58,9 @@ class DishController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $dish = Dish::find($id);
+
+        return view('dishes.edit', compact('dish'));
     }
 
     /**
@@ -66,7 +68,18 @@ class DishController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request -> all();
+        $dish = Dish::find($id);
+        $user = Auth::user();
+
+        $dish -> name = $data['name'];
+        $dish -> description = $data['description'];
+        $dish -> price = $data['price'];
+        $dish -> visible = $data['visible'];
+
+        $user->dishes() -> save($dish);
+
+        return redirect()->route('dashboard', $user->id);
     }
 
     /**
@@ -74,6 +87,9 @@ class DishController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $dish = Dish::find($id);
+        $dish -> delete();
+
+        return redirect() -> route('dashboard', compact('dish'));
     }
 }
